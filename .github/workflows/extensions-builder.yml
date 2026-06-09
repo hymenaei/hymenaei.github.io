@@ -1,4 +1,4 @@
-name: Build Extensions JSON
+name: extensions-builder
 
 on:
   schedule:
