@@ -1,7 +1,8 @@
 extensions:
   - id: retopoflow
     repo: CGCookie/retopoflow
-    branch_prefix: v4
+    prefixes: ["v4", "v4."]
+    fallback: main
 
   - id: jewelcraft
     repo: mrachinskiy/jewelcraft
