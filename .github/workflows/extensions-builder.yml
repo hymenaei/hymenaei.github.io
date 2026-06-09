@@ -22,7 +22,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        run: pip install requests pyyaml
+        run: pip install requests pyyaml packaging
 
       - name: Build extensions.json
         run: python scripts/extensions-builder.py
