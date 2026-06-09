@@ -59,7 +59,7 @@ def get_latest_branch(repo, prefixes):
 
 
 def download_zip(repo, branch):
-    url = f"https://codeload.github.com/{repo}/zip/refs/heads/{branch}"
+    url = f"https://github.com/{repo}/archive/refs/heads/{branch}.zip"
     r = requests.get(url, headers=HEADERS, timeout=60)
     r.raise_for_status()
 
