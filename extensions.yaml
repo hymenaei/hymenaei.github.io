@@ -1,0 +1,8 @@
+extensions:
+  - id: retopoflow
+    repo: CGCookie/retopoflow
+    branch_prefix: v4
+
+  - id: jewelcraft
+    repo: mrachinskiy/jewelcraft
+    use_releases: true
