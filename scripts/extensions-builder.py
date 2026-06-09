@@ -27,15 +27,22 @@ def get_default_branch(repo):
 
 
 def get_latest_branch(repo, prefixes):
-    r = requests.get(
-        f"https://api.github.com/repos/{repo}/branches",
-        headers=HEADERS,
-        timeout=30
-    )
-    r.raise_for_status()
+    page = 1
+    names = []
+    while True:
+        r = requests.get(
+            f"https://api.github.com/repos/{repo}/branches",
+            headers=HEADERS,
+            params={"per_page": 100, "page": page},
+            timeout=30
+        )
+        r.raise_for_status()
+        data = r.json()
+        if not data:
+            break
+        names.extend(b["name"] for b in data)
+        page += 1
 
-    names = [b["name"] for b in r.json()]
-    print(f"All branches for {repo}: {names}")
     candidates = [
         n for n in names
         if any(n.startswith(p) for p in prefixes)
