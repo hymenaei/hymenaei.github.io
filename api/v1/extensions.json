@@ -1,1 +1,28 @@
-
+{
+  "version": "v1",
+  "blocklist": [],
+  "data": [
+    {
+      "schema_version": "1.0.0",
+      "id": "retopoflow",
+      "name": "RetopoFlow 3",
+      "version": "3.4.11",
+      "type": "add-on",
+      "website": "https://github.com/CGCookie/retopoflow",
+      "archive_url": "https://github.com/CGCookie/retopoflow/archive/refs/heads/master.zip",
+      "archive_size": 13128762,
+      "archive_hash": "sha256:a9a3d20570b391fbd912fb13543818086858402382355a8623d6f6c49678d6b9"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "jewelcraft",
+      "name": "JewelCraft",
+      "version": "2.18.0",
+      "type": "add-on",
+      "website": "https://github.com/mrachinskiy/jewelcraft",
+      "archive_url": "https://github.com/mrachinskiy/jewelcraft/archive/refs/heads/master.zip",
+      "archive_size": 226032,
+      "archive_hash": "sha256:2945976be28fee0a5f22902ae54b6ea287a9fbf6b13070a3fffabe0227f56f4f"
+    }
+  ]
+}
