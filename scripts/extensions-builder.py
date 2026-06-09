@@ -3,16 +3,19 @@ import requests, yaml, json, hashlib, zipfile, io
 CONFIG = yaml.safe_load(open("extensions.yml"))
 
 
-def get_latest_v4_branch(repo):
-    url = f"https://api.github.com/repos/{repo}/branches"
-    branches = requests.get(url).json()
+def get_latest_branch(repo, prefixes, fallback="main"):
+    branches = requests.get(f"https://api.github.com/repos/{repo}/branches").json()
+    names = [b["name"] for b in branches]
 
-    v4 = [b["name"] for b in branches if b["name"].startswith("v4")]
-    if not v4:
-        return "master"
+    candidates = [
+        n for n in names
+        if any(n.startswith(p) for p in prefixes)
+    ]
 
-    # naive semver sort (good enough for v4.x.x)
-    return sorted(v4, reverse=True)[0]
+    if not candidates:
+        return fallback
+
+    return sorted(candidates)[-1]
 
 
 def download_zip(repo, branch):
