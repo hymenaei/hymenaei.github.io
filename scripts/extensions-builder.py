@@ -118,6 +118,7 @@ for ext in CONFIG["extensions"]:
         "schema_version": "1.0.0",
         "id": ext["id"],
         "name": manifest.get("name", ext["id"]),
+        "tagline": manifest.get("tagline", ""),
         "version": manifest.get("version", branch),
         "type": "add-on",
         "website": f"https://github.com/{repo}",
