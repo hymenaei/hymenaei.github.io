@@ -5,13 +5,13 @@
     {
       "schema_version": "1.0.0",
       "id": "retopoflow",
-      "name": "RetopoFlow 3",
-      "version": "3.4.11",
+      "name": "Retopoflow 4",
+      "version": "4.1.8",
       "type": "add-on",
       "website": "https://github.com/CGCookie/retopoflow",
-      "archive_url": "https://github.com/CGCookie/retopoflow/archive/refs/heads/master.zip",
-      "archive_size": 13128762,
-      "archive_hash": "sha256:a9a3d20570b391fbd912fb13543818086858402382355a8623d6f6c49678d6b9"
+      "archive_url": "https://github.com/CGCookie/retopoflow/archive/refs/heads/v4.2.0.zip",
+      "archive_size": 13306392,
+      "archive_hash": "sha256:64a29f199c20cf7d44832eef49836583aa3703af467e3c578082b2e92581b696"
     },
     {
       "schema_version": "1.0.0",
