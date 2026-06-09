@@ -59,6 +59,47 @@
       "archive_url": "https://github.com/mrachinskiy/jewelcraft/archive/refs/heads/master.zip",
       "archive_size": 226032,
       "archive_hash": "sha256:2945976be28fee0a5f22902ae54b6ea287a9fbf6b13070a3fffabe0227f56f4f"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "gob",
+      "name": "GoB",
+      "version": "4.2.5",
+      "tagline": "GoB providing a bridge between ZBrush and Blender",
+      "maintainer": "Daniel Grauer (kromar) and Jamie Phipps (Boozebeard)",
+      "type": "add-on",
+      "tags": [
+        "Import-Export"
+      ],
+      "blender_version_min": "4.2.0",
+      "license": [
+        "SPDX:GPL-3.0-or-later"
+      ],
+      "website": "https://github.com/JoseConseco/GoB/wiki",
+      "copyright": [
+        "2024 Jose Conseco",
+        "2024 Daniel Grauer (kromar)"
+      ],
+      "permissions": {
+        "files": "Requires access to deploy Zbrush configuration files"
+      },
+      "build": {
+        "paths_exclude_pattern": [
+          ".git",
+          "__pycache__/",
+          ".gitignore",
+          "README.md",
+          "LICENSE.md",
+          "*.psd",
+          "*.kra",
+          "*.xpm",
+          "*.blend",
+          "build"
+        ]
+      },
+      "archive_url": "https://github.com/JoseConseco/GoB/archive/refs/heads/master.zip",
+      "archive_size": 2310937,
+      "archive_hash": "sha256:0116826f0b849abccc3797ab2b8a81dbfad5056e4f59ff55ab6b124173817a81"
     }
   ]
 }
