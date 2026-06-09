@@ -8,8 +8,7 @@ import io
 import tomllib
 from packaging.version import Version, InvalidVersion
 
-CONFIG = yaml.safe_load(open("extensions.yml"))
-
+CONFIG = yaml.safe_load(open("extensions.yml", "r", encoding="utf-8"))
 
 HEADERS = {
     "Accept": "application/vnd.github+json",
@@ -30,6 +29,7 @@ def get_default_branch(repo):
 def get_latest_branch(repo, prefixes):
     page = 1
     names = []
+
     while True:
         r = requests.get(
             f"https://api.github.com/repos/{repo}/branches",
@@ -46,10 +46,11 @@ def get_latest_branch(repo, prefixes):
 
     candidates = [
         n for n in names
-        if any(n.startswith(p) for p in prefixes)
+        if prefixes and any(n.startswith(p) for p in prefixes)
     ]
+
     print(f"Candidates for prefixes {prefixes}: {candidates}")
-    # If we have versioned branches, pick latest vX.Y.Z
+
     if candidates:
         def version_key(name):
             m = re.match(r"^v(\d+(?:\.\d+)*)", name)
@@ -57,12 +58,11 @@ def get_latest_branch(repo, prefixes):
                 try:
                     return Version(m.group(1))
                 except InvalidVersion:
-                    return Version("0.0.0")
+                    pass
             return Version("0.0.0")
 
         return max(candidates, key=version_key)
 
-    # fallback = real default branch (NOT hardcoded main)
     return get_default_branch(repo)
 
 
@@ -80,7 +80,7 @@ def download_zip(repo, branch):
 def extract_manifest(zip_bytes):
     z = zipfile.ZipFile(io.BytesIO(zip_bytes))
 
-    matches = [f for f in z.namelist() if "blender_manifest.toml" in f]
+    matches = [f for f in z.namelist() if f.endswith("blender_manifest.toml")]
     if not matches:
         raise Exception("Missing blender_manifest.toml")
 
@@ -88,12 +88,19 @@ def extract_manifest(zip_bytes):
     return tomllib.loads(content.decode("utf-8"))
 
 
+def json_safe(value):
+    if isinstance(value, dict):
+        return {k: json_safe(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [json_safe(v) for v in value]
+    return value
+
+
 output = {
     "version": "v1",
     "blocklist": [],
     "data": []
 }
-
 
 for ext in CONFIG["extensions"]:
     repo = ext["repo"]
@@ -103,21 +110,19 @@ for ext in CONFIG["extensions"]:
 
     zip_data, sha, size, url = download_zip(repo, branch)
     manifest = extract_manifest(zip_data)
+    manifest = json_safe(manifest)
 
-    output["data"].append({
+    entry = {
         "schema_version": "1.0.0",
         "id": ext["id"],
-        "name": manifest.get("name", ext["id"]),
-        "tagline": manifest.get("tagline", ""),
-        "maintainer": manifest.get("maintainer", ""),
-        "version": manifest.get("version", branch),
-        "type": "add-on",
         "website": f"https://github.com/{repo}",
         "archive_url": url,
         "archive_size": size,
         "archive_hash": f"sha256:{sha}",
-    })
+        "manifest": manifest,
+    }
 
+    output["data"].append(entry)
 
-with open("api/v1/extensions.json", "w") as f:
-    json.dump(output, f, indent=2)
+with open("api/v1/extensions.json", "w", encoding="utf-8") as f:
+    json.dump(output, f, indent=2, ensure_ascii=False)
