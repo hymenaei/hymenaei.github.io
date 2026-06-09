@@ -5,28 +5,70 @@
     {
       "schema_version": "1.0.0",
       "id": "retopoflow",
-      "name": "Retopoflow 4",
-      "tagline": "A unified suite of retopology tools for Blender",
-      "maintainer": "Orange Turbine: Dr. Jon Denning, Jonathan Lampel, Juan Fran Matheu <orangeturbine@cgcookie.com>",
-      "version": "4.1.8",
-      "type": "add-on",
       "website": "https://github.com/CGCookie/retopoflow",
       "archive_url": "https://github.com/CGCookie/retopoflow/archive/refs/heads/v4.2.0.zip",
       "archive_size": 13306392,
-      "archive_hash": "sha256:64a29f199c20cf7d44832eef49836583aa3703af467e3c578082b2e92581b696"
+      "archive_hash": "sha256:64a29f199c20cf7d44832eef49836583aa3703af467e3c578082b2e92581b696",
+      "manifest": {
+        "schema_version": "1.0.0",
+        "id": "retopoflow",
+        "version": "4.1.8",
+        "name": "Retopoflow 4",
+        "tagline": "A unified suite of retopology tools for Blender",
+        "maintainer": "Orange Turbine: Dr. Jon Denning, Jonathan Lampel, Juan Fran Matheu <orangeturbine@cgcookie.com>",
+        "type": "add-on",
+        "website": "https://docs.retopoflow.com",
+        "tags": [
+          "3D View",
+          "Modeling",
+          "Mesh"
+        ],
+        "blender_version_min": "4.2.0",
+        "license": [
+          "SPDX:GPL-2.0-or-later"
+        ],
+        "copyright": [
+          "2025 Orange Turbine, Autotroph Inc"
+        ]
+      }
     },
     {
       "schema_version": "1.0.0",
       "id": "jewelcraft",
-      "name": "JewelCraft",
-      "tagline": "Jewelry design toolkit",
-      "maintainer": "Mikhail Rachinskiy",
-      "version": "2.18.0",
-      "type": "add-on",
       "website": "https://github.com/mrachinskiy/jewelcraft",
       "archive_url": "https://github.com/mrachinskiy/jewelcraft/archive/refs/heads/master.zip",
       "archive_size": 226032,
-      "archive_hash": "sha256:2945976be28fee0a5f22902ae54b6ea287a9fbf6b13070a3fffabe0227f56f4f"
+      "archive_hash": "sha256:2945976be28fee0a5f22902ae54b6ea287a9fbf6b13070a3fffabe0227f56f4f",
+      "manifest": {
+        "schema_version": "1.0.0",
+        "id": "jewelcraft",
+        "version": "2.18.0",
+        "name": "JewelCraft",
+        "tagline": "Jewelry design toolkit",
+        "maintainer": "Mikhail Rachinskiy",
+        "type": "add-on",
+        "tags": [
+          "Modeling"
+        ],
+        "blender_version_min": "4.5.0",
+        "website": "https://github.com/mrachinskiy/jewelcraft",
+        "license": [
+          "SPDX:GPL-3.0-or-later"
+        ],
+        "copyright": [
+          "2015-2026 Mikhail Rachinskiy",
+          "2026 Artem Viveritsa"
+        ],
+        "permissions": {
+          "files": "Manage asset library"
+        },
+        "build": {
+          "paths_exclude_pattern": [
+            "__pycache__/",
+            "*.pickle"
+          ]
+        }
+      }
     }
   ]
 }
