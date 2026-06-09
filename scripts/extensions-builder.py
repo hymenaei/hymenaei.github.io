@@ -35,12 +35,12 @@ def get_latest_branch(repo, prefixes):
     r.raise_for_status()
 
     names = [b["name"] for b in r.json()]
-
+    print(f"All branches for {repo}: {names}")
     candidates = [
         n for n in names
         if any(n.startswith(p) for p in prefixes)
     ]
-
+    print(f"Candidates for prefixes {prefixes}: {candidates}")
     # If we have versioned branches, pick latest vX.Y.Z
     if candidates:
         def version_key(name):
