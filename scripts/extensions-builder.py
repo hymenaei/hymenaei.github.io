@@ -5,6 +5,7 @@ import json
 import hashlib
 import zipfile
 import io
+import tomllib
 from packaging.version import Version, InvalidVersion
 
 CONFIG = yaml.safe_load(open("extensions.yml"))
@@ -79,23 +80,12 @@ def download_zip(repo, branch):
 def extract_manifest(zip_bytes):
     z = zipfile.ZipFile(io.BytesIO(zip_bytes))
 
-    matches = [
-        f for f in z.namelist()
-        if "blender_manifest.toml" in f
-    ]
-
+    matches = [f for f in z.namelist() if "blender_manifest.toml" in f]
     if not matches:
-        raise Exception("Missing blender_manifest.toml in extension zip")
+        raise Exception("Missing blender_manifest.toml")
 
-    content = z.read(matches[0]).decode("utf-8")
-
-    meta = {}
-    for line in content.splitlines():
-        if "=" in line:
-            k, v = line.split("=", 1)
-            meta[k.strip()] = v.strip().strip('"')
-
-    return meta
+    content = z.read(matches[0])
+    return tomllib.loads(content.decode("utf-8"))
 
 
 output = {
@@ -119,6 +109,7 @@ for ext in CONFIG["extensions"]:
         "id": ext["id"],
         "name": manifest.get("name", ext["id"]),
         "tagline": manifest.get("tagline", ""),
+        "maintainer": manifest.get("maintainer", ""),
         "version": manifest.get("version", branch),
         "type": "add-on",
         "website": f"https://github.com/{repo}",
