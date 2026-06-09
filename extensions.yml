@@ -6,3 +6,7 @@ extensions:
   - id: jewelcraft
     repo: mrachinskiy/jewelcraft
     use_releases: true
+
+  - id: GoB
+    repo: JoseConseco/GoB
+    use_releases: true
