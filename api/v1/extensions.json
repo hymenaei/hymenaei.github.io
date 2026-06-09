@@ -4,76 +4,25 @@
   "data": [
     {
       "schema_version": "1.0.0",
+      "id": "retopoflow",
+      "name": "Retopoflow 4",
+      "version": "4.1.8",
+      "type": "add-on",
+      "website": "https://github.com/CGCookie/retopoflow",
+      "archive_url": "https://github.com/CGCookie/retopoflow/archive/refs/heads/v4.2.0.zip",
+      "archive_size": 13306392,
+      "archive_hash": "sha256:64a29f199c20cf7d44832eef49836583aa3703af467e3c578082b2e92581b696"
+    },
+    {
+      "schema_version": "1.0.0",
       "id": "jewelcraft",
       "name": "JewelCraft",
-      "tagline": "Jewelry design toolkit",
-      "version": "2.18.1",
+      "version": "2.18.0",
       "type": "add-on",
-      "maintainer": "Mikhail Rachinskiy",
-      "license": [
-        "SPDX:GPL-3.0-or-later"
-      ],
-      "blender_version_min": "4.2.0",
       "website": "https://github.com/mrachinskiy/jewelcraft",
-      "copyright": [
-        "2015-2025 Mikhail Rachinskiy"
-      ],
-      "permissions": {
-        "files": "Manage asset library"
-      },
-      "tags": [
-        "Modeling"
-      ],
-      "archive_url": "https://github.com/mrachinskiy/jewelcraft/releases/download/v2.18.1-blender4.2.0/jewelcraft-2_18_1.zip",
-      "archive_size": 697746,
-      "archive_hash": "sha256:4ced723b57ca869c86d5122ec4eb850eea1ce6ab71cbb145b191bdf6f97b379e"
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "messythings",
-      "name": "Messy Things",
-      "tagline": "Deal with badly organized projects",
-      "version": "1.4.1",
-      "type": "add-on",
-      "maintainer": "Mikhail Rachinskiy",
-      "license": [
-        "SPDX:GPL-3.0-or-later"
-      ],
-      "blender_version_min": "4.2.0",
-      "website": "https://github.com/mrachinskiy/messythings",
-      "copyright": [
-        "2017-2025 Mikhail Rachinskiy"
-      ],
-      "tags": [
-        "Scene",
-        "Object"
-      ],
-      "archive_url": "https://github.com/mrachinskiy/messythings/releases/latest/download/messythings-1_4_1.zip",
-      "archive_size": 20623,
-      "archive_hash": "sha256:41a6d2699049bf4438d23708f949607c129ca38b804cd0b181f91e38bc26b51a"
-    },
-    {
-      "schema_version": "1.0.0",
-      "id": "sidekick",
-      "name": "Sidekick",
-      "tagline": "Detect common modeling mistakes",
-      "version": "1.2.2",
-      "type": "add-on",
-      "maintainer": "Mikhail Rachinskiy",
-      "license": [
-        "SPDX:GPL-3.0-or-later"
-      ],
-      "blender_version_min": "4.2.0",
-      "website": "https://github.com/mrachinskiy/sidekick",
-      "copyright": [
-        "2020-2024 Mikhail Rachinskiy"
-      ],
-      "tags": [
-        "Modeling"
-      ],
-      "archive_url": "https://github.com/mrachinskiy/sidekick/releases/latest/download/sidekick-1_2_2.zip",
-      "archive_size": 28418,
-      "archive_hash": "sha256:30314d291ee2bae784a7937cf44ff645a409d7cb2e4abb33e0ffe58170ddf6b4"
+      "archive_url": "https://github.com/mrachinskiy/jewelcraft/archive/refs/heads/master.zip",
+      "archive_size": 226032,
+      "archive_hash": "sha256:2945976be28fee0a5f22902ae54b6ea287a9fbf6b13070a3fffabe0227f56f4f"
     }
   ]
 }
