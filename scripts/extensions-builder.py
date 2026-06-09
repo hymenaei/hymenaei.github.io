@@ -113,13 +113,10 @@ for ext in CONFIG["extensions"]:
     manifest = json_safe(manifest)
 
     entry = {
-        "schema_version": "1.0.0",
-        "id": ext["id"],
-        "website": f"https://github.com/{repo}",
+        **manifest,
         "archive_url": url,
         "archive_size": size,
         "archive_hash": f"sha256:{sha}",
-        "manifest": manifest,
     }
 
     output["data"].append(entry)
