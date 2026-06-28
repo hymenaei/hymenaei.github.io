@@ -5,7 +5,7 @@
     {
       "schema_version": "1.0.0",
       "id": "retopoflow",
-      "version": "4.1.8",
+      "version": "4.2.0",
       "name": "Retopoflow 4",
       "tagline": "A unified suite of retopology tools for Blender",
       "maintainer": "Orange Turbine: Dr. Jon Denning, Jonathan Lampel, Juan Fran Matheu <orangeturbine@cgcookie.com>",
@@ -24,8 +24,8 @@
         "2025 Orange Turbine, Autotroph Inc"
       ],
       "archive_url": "https://github.com/CGCookie/retopoflow/archive/refs/heads/v4.2.0.zip",
-      "archive_size": 13783300,
-      "archive_hash": "sha256:fde3e778da029590bd7fd775adac9c1e80921697ef66ac942b1b297408e33038"
+      "archive_size": 13783431,
+      "archive_hash": "sha256:010d56a83a6d633801ae13d9154e061f4b3d5c987511fa883fbd21214f51cce3"
     },
     {
       "schema_version": "1.0.0",
