@@ -30,7 +30,7 @@
     {
       "schema_version": "1.0.0",
       "id": "jewelcraft",
-      "version": "2.18.0",
+      "version": "3.0.0",
       "name": "JewelCraft",
       "tagline": "Jewelry design toolkit",
       "maintainer": "Mikhail Rachinskiy",
@@ -57,8 +57,8 @@
         ]
       },
       "archive_url": "https://github.com/mrachinskiy/jewelcraft/archive/refs/heads/master.zip",
-      "archive_size": 230255,
-      "archive_hash": "sha256:fcb6307fc72973190f6da00bfa01e6f74101bad10b3f6edd2f6b0bda4310da9b"
+      "archive_size": 230245,
+      "archive_hash": "sha256:584e4f5f6889390e9c61fb344c3db65d7f8c12f4df514e6b48781a5c4ef39b2f"
     },
     {
       "schema_version": "1.0.0",
