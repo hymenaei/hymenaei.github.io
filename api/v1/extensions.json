@@ -24,13 +24,13 @@
         "2025 Orange Turbine, Autotroph Inc"
       ],
       "archive_url": "https://github.com/CGCookie/retopoflow/archive/refs/heads/v4.2.0.zip",
-      "archive_size": 13744915,
-      "archive_hash": "sha256:f619a3223ab9368e5894c949f11d7a345c8f318c39df5fab0478bc5ba4b0596e"
+      "archive_size": 13745545,
+      "archive_hash": "sha256:fe68c9fb06c9338367325822b2193d3f913f35991712f8b178efcd44f50a2c16"
     },
     {
       "schema_version": "1.0.0",
       "id": "jewelcraft",
-      "version": "3.0.0",
+      "version": "3.0.1",
       "name": "JewelCraft",
       "tagline": "Jewelry design toolkit",
       "maintainer": "Mikhail Rachinskiy",
@@ -57,8 +57,8 @@
         ]
       },
       "archive_url": "https://github.com/mrachinskiy/jewelcraft/archive/refs/heads/master.zip",
-      "archive_size": 232178,
-      "archive_hash": "sha256:02f6e398c01a6b7a68467fed21ea670d686d6de53b943281712b384f370cd955"
+      "archive_size": 232101,
+      "archive_hash": "sha256:6391ae77dad5d5f377a3ca8f555a042503441bf5aa56e133595a949565d6930c"
     },
     {
       "schema_version": "1.0.0",
