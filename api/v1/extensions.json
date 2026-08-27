@@ -24,8 +24,8 @@
         "2025 Orange Turbine, Autotroph Inc"
       ],
       "archive_url": "https://github.com/CGCookie/retopoflow/archive/refs/heads/v4.3.0.zip",
-      "archive_size": 13765221,
-      "archive_hash": "sha256:771ebdc672150e69d867e501f034f9d4d8d2c5695a7416ee75c62794d0bd608c"
+      "archive_size": 13766484,
+      "archive_hash": "sha256:1e4e4a5dc83e57bd6785652be0e679f7fa626d0c20327b507907cd2b18ef6220"
     },
     {
       "schema_version": "1.0.0",
@@ -57,8 +57,8 @@
         ]
       },
       "archive_url": "https://github.com/mrachinskiy/jewelcraft/archive/refs/heads/master.zip",
-      "archive_size": 232101,
-      "archive_hash": "sha256:6391ae77dad5d5f377a3ca8f555a042503441bf5aa56e133595a949565d6930c"
+      "archive_size": 232126,
+      "archive_hash": "sha256:f254d4f35fe9f5733eb27343b4788b33fd2c4e17507e330154413478da93a0db"
     },
     {
       "schema_version": "1.0.0",
