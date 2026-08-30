@@ -64,7 +64,7 @@
       "schema_version": "1.0.0",
       "id": "gob",
       "name": "GoB",
-      "version": "4.5.0",
+      "version": "4.5.1",
       "tagline": "GoB providing a bridge between ZBrush and Blender",
       "maintainer": "Daniel Grauer (kromar) and Jamie Phipps (Boozebeard)",
       "type": "add-on",
@@ -98,8 +98,8 @@
         ]
       },
       "archive_url": "https://github.com/JoseConseco/GoB/archive/refs/heads/master.zip",
-      "archive_size": 2313245,
-      "archive_hash": "sha256:84ccbe42895fad2ebbd3a49df05bddf872627131ea95d521e492e067a9d48f5f"
+      "archive_size": 2316006,
+      "archive_hash": "sha256:03d03148dd2c090b2461ef9aa7ca41e78eba0bdf3870b009931b3f547040d2ce"
     }
   ]
 }
