@@ -64,7 +64,7 @@
       "schema_version": "1.0.0",
       "id": "gob",
       "name": "GoB",
-      "version": "4.5.2",
+      "version": "4.5.3",
       "tagline": "GoB providing a bridge between ZBrush and Blender",
       "maintainer": "Daniel Grauer (kromar) and Jamie Phipps (Boozebeard)",
       "type": "add-on",
@@ -86,21 +86,23 @@
       "build": {
         "paths_exclude_pattern": [
           ".git",
+          ".idea/",
+          ".zed/",
           "__pycache__/",
           ".gitignore",
           "README.md",
           "LICENSE.md",
           "*.psd",
           "*.kra",
-          "*.xpm",
           "*.blend",
+          "ZScripts/GoB_Import_Settings.zvr",
           "build",
           "tests"
         ]
       },
       "archive_url": "https://github.com/JoseConseco/GoB/archive/refs/heads/master.zip",
-      "archive_size": 2319108,
-      "archive_hash": "sha256:f64ccdf329120a71f4a794718550c9df2566f962b629127e98fa1525cafed363"
+      "archive_size": 2319298,
+      "archive_hash": "sha256:712f216a657d96bd29e5c1b2ba98ec8b38f79b53ca55543938800fd63918af03"
     }
   ]
 }
